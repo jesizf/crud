@@ -59,7 +59,9 @@ const controller = {
 		// Do the magic
 		return res.render('product-edit-form',{
 			product : products.find(product => product.id === +req.params.id)
-		})
+		}),
+		fs.writeFileSync(path.join(__dirname, '..', 'data', 'productsDataBase.json'),JSON.stringify(products, null,3),'utf-8');
+		
 	},
 	// Update - Method to update
 	update: (req, res) => {
