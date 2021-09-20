@@ -23,7 +23,7 @@ const controller = {
 			products : products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase())),
 			toThousand,
 			toDiscount,
-			keywords : req.query.keywords
+			keywords : req.query.keywords,
 		})
 	}
 		
